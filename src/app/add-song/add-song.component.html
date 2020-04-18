@@ -1,0 +1,50 @@
+<div>
+  <h2 id="adn">Adding a new song</h2>
+  <button mat-raised-button id="ada"  (click)="openDialog()">+ AddArtist</button>
+</div>
+<div>
+  <form [formGroup]="form" (ngSubmit)="OnSubmit()">
+    
+      <mat-form-field id="sn" appearance="outline">
+        <mat-label >Song name</mat-label>
+        <input matInput type="text"  formControlName="songname">
+        <mat-error *ngIf="hasError('songname', 'required')">Song Name is required</mat-error>
+
+      </mat-form-field>
+    <br>
+
+   <div>
+     <mat-form-field id="dn" appearance="outline">
+    
+        <mat-label>Choose a date</mat-label>
+        <input matInput [min]="minDate" [max]="maxDate" [matDatepicker]="picker" formControlName="date">
+        <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+        <mat-datepicker #picker></mat-datepicker>
+        <mat-error *ngIf="hasError('date', 'required')">Date is required</mat-error>
+  </mat-form-field>
+</div>
+<div>
+  <mat-label style="margin-left:4%;margin-bottom:2%;size:100%">Artwork</mat-label> 
+  <input type="file" style="margin-left: 5%
+  " formControlName="artwork" id="artwork">
+</div>
+<div>
+
+  <mat-form-field id="as" appearance="outline">
+    <mat-label>Search</mat-label>
+    <mat-select formControlName="artistName" multiple>
+      <mat-option *ngFor="let i of add" [value]="i">{{i}}</mat-option>
+    </mat-select>
+    <mat-error *ngIf="hasError('artistName', 'required')">Artist name is required</mat-error>
+  </mat-form-field>
+  
+</div> 
+
+<div>
+  <button mat-button id="cancel" routerLink="/songs">Cancel</button>
+  <button mat-button id="save" mat-button type="submit" [disabled]="!form.valid">Save</button>
+</div> 
+
+</form>
+
+</div>

@@ -1,0 +1,34 @@
+<h4 id="adda">Add Artist</h4>
+<div>
+    <form [formGroup]="form" (ngSubmit)="OnSubmit()">
+      
+        <mat-form-field id="an" appearance="outline">
+          <mat-label >Artist name</mat-label>
+          <input matInput type="text"  formControlName="artistname">
+          <mat-error *ngIf="hasError('artistname', 'required')">Artist name is required</mat-error>
+        </mat-form-field>
+      <br>
+  
+     <div>
+       <mat-form-field id="dob" appearance="outline">
+      <mat-label>Date Of Birth</mat-label>
+      <input matInput [matDatepicker]="picker" formControlName="dateofbirth">
+      <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+      <mat-datepicker #picker></mat-datepicker>
+      <mat-error *ngIf="hasError('dateofbirth', 'required')">Artist name is required</mat-error>
+      
+    </mat-form-field>
+  </div>
+  <div>
+    <mat-form-field id="bi" appearance="outline">
+        <mat-label >Bio</mat-label>
+        <textarea matInput type="text"  formControlName="bio"></textarea>
+        <mat-error *ngIf="hasError('bio', 'required')">Artist name is required</mat-error>
+      </mat-form-field>
+  </div>
+  <div>
+    <button mat-button id="cancel" (click)="onNoClick()">Cancel</button>
+    <button mat-button id="done" mat-button type="submit" [disabled]="!form.valid">Done</button>
+  </div>
+  </form>
+  

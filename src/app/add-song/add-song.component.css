@@ -1,0 +1,47 @@
+#adn{
+font-size:200%;
+color:black;
+font-style: initial;
+margin-left:4%;
+
+}
+#sn{
+    margin-left: 4%;
+    width:40%;
+    appearance: fill;
+}
+#dn{
+    margin-left:4%;
+    width:40%;
+    appearance: fill;
+}
+#art{
+    margin-left:4%;
+    background-color: grey;
+    color:white;
+    width:10%
+}
+#as{
+    margin-left:4%;
+    width:40%;
+    appearance: fill;
+}
+
+#ada{
+    margin-left: 50%;
+    background-color:grey;
+    color: white;
+}
+#cancel{
+    margin-left:4%;
+    background-color: grey;
+    color:white;
+    width:10%
+}
+#save{
+    margin-left: 5%;
+    background-color: grey;
+    color:white;
+    width:10%
+
+}

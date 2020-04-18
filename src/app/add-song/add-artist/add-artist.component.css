@@ -1,0 +1,34 @@
+#adda{
+    font-size:200%;
+    color:black;
+    font-style: initial;
+    text-underline-position: below;
+}
+#an{
+    margin-left: 4%;
+    width:40%;
+    appearance: fill;
+}
+#dob{
+    margin-left:4%;
+    width:40%;
+    appearance: fill;
+}
+#bi{
+    margin-left: 4%;
+    width:40%;
+    appearance: fill;
+}
+#cancel{
+    margin-left:4%;
+    background-color: grey;
+    color:white;
+    width:5%
+}
+#done{
+    margin-left: 5%;
+    background-color: grey;
+    color:white;
+    width:5%
+
+}
